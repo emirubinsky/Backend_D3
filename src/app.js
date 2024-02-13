@@ -1,10 +1,10 @@
-import express from 'express';
-import ProductManager from './ProductManager.js';
+const express = require('express');
+const ProductManager = require('./ProductManager');
 
 const app = express();
 const PORT = 3000;
 
-const productManager = new ProductManager('productos.json');
+const productManager = new ProductManager('products.json');
 
 // Ruta para obtener todos los productos
 app.get('/products', async (req, res) => {
